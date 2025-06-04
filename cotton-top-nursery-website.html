@@ -14,12 +14,12 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #fefefe;
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7fafc;
+            color: #263238;
+            font-size: 1.08rem;
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -28,155 +28,187 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: #fff;
+            color: #263238;
+            box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+            padding: 0.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: box-shadow 0.3s;
         }
 
-        nav {
+        nav.container {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            min-height: 64px;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #a8d8a8;
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #388e3c;
+            letter-spacing: 1px;
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto;
+            margin-right: 14px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            background: #fff;
         }
 
         .nav-links {
             display: flex;
+            gap: 2.5rem;
             list-style: none;
-            gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
-            color: white;
+            color: #263238;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            font-size: 1.08rem;
+            padding: 8px 18px;
+            border-radius: 24px;
+            transition: background 0.2s, color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: #a8d8a8;
+        .nav-links a:hover, .nav-links a.active {
+            background: #e8f5e9;
+            color: #388e3c;
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: white;
-            font-size: 1.5rem;
+            color: #388e3c;
+            font-size: 2rem;
             cursor: pointer;
         }
 
-        /* Hero Section */
+        /* Hero Section Modernized */
         .hero {
-            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(74, 124, 89, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="leaves" patternUnits="userSpaceOnUse" width="100" height="100"><path d="M20,80 Q30,20 50,40 Q70,60 80,20" stroke="%23a8d8a8" stroke-width="2" fill="none" opacity="0.3"/><circle cx="30" cy="50" r="3" fill="%23a8d8a8" opacity="0.4"/><circle cx="60" cy="30" r="2" fill="%2385c985" opacity="0.3"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaves)"/></svg>');
+            background: linear-gradient(rgba(56,142,60,0.82), rgba(56,142,60,0.72)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #fff;
             text-align: center;
-            padding: 6rem 0;
+            padding: 7rem 0 5rem 0;
             position: relative;
+            border-radius: 0 0 36px 36px;
+            box-shadow: 0 8px 32px rgba(44,62,80,0.10);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.35rem;
+            margin-bottom: 2.2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #e8f5e9;
         }
 
         .btn {
             display: inline-block;
-            background: #85c985;
-            color: #2d5a27;
-            padding: 15px 30px;
+            background: #388e3c;
+            color: #fff;
+            padding: 15px 36px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            border-radius: 32px;
+            font-weight: 700;
+            font-size: 1.13rem;
             border: none;
             cursor: pointer;
-            font-size: 1.1rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            transition: background 0.2s, transform 0.2s;
         }
 
         .btn:hover {
-            background: #a8d8a8;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: #2d5a27;
+            transform: translateY(-2px) scale(1.04);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+            background: #fff;
+            color: #388e3c;
+            border: 2px solid #388e3c;
         }
 
         .btn-secondary:hover {
-            background: white;
+            background: #e8f5e9;
             color: #2d5a27;
         }
 
-        /* Services Section */
+        /* Services Section Modernized */
         .services {
             padding: 5rem 0;
-            background: #f8f9fa;
+            background: #f7fafc;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             margin-bottom: 3rem;
-            color: #2d5a27;
+            color: #388e3c;
+            font-weight: 900;
+            letter-spacing: 1px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 22px;
+            box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+            transition: transform 0.25s, box-shadow 0.25s;
             text-align: center;
+            border: 1.5px solid #e8f5e9;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 16px 40px rgba(44,62,80,0.13);
+            border-color: #a8d8a8;
         }
 
         .service-icon {
-            font-size: 3rem;
-            color: #4a7c59;
-            margin-bottom: 1rem;
+            font-size: 3.2rem;
+            color: #388e3c;
+            margin-bottom: 1.2rem;
         }
 
         .service-card h3 {
             color: #2d5a27;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
+            font-weight: 800;
+        }
+
+        .service-card p {
+            color: #4a7c59;
+            font-size: 1.08rem;
+            margin-bottom: 0;
         }
 
         /* Coming Soon Section */
@@ -282,34 +314,69 @@
             resize: vertical;
         }
 
-        /* Footer */
+        /* Footer Modernized */
         footer {
-            background: #2d5a27;
-            color: white;
-            padding: 2rem 0;
+            background: #fff;
+            color: #263238;
+            padding: 2.5rem 0 1.5rem 0;
             text-align: center;
+            border-top: 2px solid #e8f5e9;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2.5rem;
             margin-bottom: 2rem;
         }
 
+        .footer-section {
+            flex: 1 1 220px;
+            min-width: 220px;
+            text-align: left;
+        }
+
         .footer-section h4 {
-            color: #a8d8a8;
+            color: #388e3c;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 800;
         }
 
         .footer-section a {
-            color: white;
+            color: #388e3c;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.2s;
+            font-weight: 600;
         }
 
         .footer-section a:hover {
-            color: #a8d8a8;
+            color: #2d5a27;
+        }
+
+        .footer-social {
+            margin-top: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: #388e3c;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: #2d5a27;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e8f5e9;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            color: #4a7c59;
+            font-size: 0.98rem;
         }
 
         /* Responsive Design */
@@ -379,11 +446,16 @@
             display: none;
         }
     </style>
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Cotton Top Nursery</div>
+            <div class="logo">
+                <img src="logo.png" alt="Cotton Top Nursery Logo" style="height: 48px; vertical-align: middle; margin-right: 12px;">
+                Cotton Top Nursery
+            </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
